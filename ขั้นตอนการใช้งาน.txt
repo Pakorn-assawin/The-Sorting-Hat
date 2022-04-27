@@ -1,0 +1,13 @@
+การใช้งาน
+
+*มีแต่ไฟล์ HTML . 
+กรณี Open with Live Server ไม่ได้ 
+ dowload File > open with VS Code > Copy path > เปิด ที่ Browser (www.)
+
+ st.1 : พิมพ์ชื่อ ช่อง input > คลิก Submit >Welcom , : Name 
+	
+ st.2 : Reset , : ล้าง text ใน input 
+
+ st.3 : Generate Random Name > ชื่อ บ้าน Hufflepuff, 	Ravenclaw , Slytherin , Gryffind
+
+*ไม่มีการทำงานแบบ Auto 
