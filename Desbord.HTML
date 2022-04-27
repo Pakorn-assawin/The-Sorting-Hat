@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Your welcome to Hogwarts School of Witchcraft and Wizardry</h1>
+    
+    <h3>The Sorting Hat</h3> 
+    <p>For you to Home 
+    <br> <br>
+    ( Gryffind ) : (Hufflepuff)  <br><br> 
+    (Ravenclaw) : (Slytherin) </p>
+    
+    <h3>What is Your name?</h3>
+    <form id="myForm">
+        <input id="userInput">   
+   </form>
+   
+   
+   <h2 id="message" ></h2>
+   
+   <button onclick="myFunction()"> Submit</button> 
+   <button onclick="myFunctionR()" value="Reset form">Reset form</button>
+    
+   <h2 id="random_name" ></h2> 
+   <input id="clickMe" type="button" value="Generate Random Name" onclick="generateName();" />
+
+ <script>
+//แบ่งฟังก์ชั่นการทำงาน random--------------------------------------------------------------
+function capFirst(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+    // ***********************ฟังก์ชั้นป้อนชื่อ*********************************************
+    function myFunction() 
+             
+             {
+            var userInput = document.querySelector("#userInput");
+            var message = document.querySelector("#message");
+        
+            
+            message.innerHTML = "Welcome  , : " + userInput.value;
+        }
+    // ***********************ฟังก์ชั้นป้อนชื่อ*********************************************
+    function generateName(){
+    //   var first_name = ["abandoned","able","absolute","adorable"];
+
+      var Home = [("Gryffind"),("Hufflepuff"),("Ravenclaw"),("Slytherin")];
+
+      var name = capFirst(Home[getRandomInt(0, Home.length + 1)]);
+        document.getElementById("random_name").innerHTML = name;
+    }
+
+     //reset  --------------------------------------------------------------
+            
+     function myFunctionR() {
+        document.getElementById("myForm").reset();
+       
+                }
+  </script>
+ 
+</body>
+</html>
